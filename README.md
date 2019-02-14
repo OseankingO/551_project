@@ -1,8 +1,10 @@
-# 551_Python Project
+# 551_Python Project_Password Manager
 
 ## Introduction
 
-This is the 551 Python individual project | Author: Xinghan Qin
+This program is 551 Python class individual project written by Xinghan Qin.
+
+The main function of this program is to store the different passwords for user in the save way
 
 ## Pirposals
 
