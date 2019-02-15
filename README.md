@@ -4,7 +4,12 @@
 
 This program is 551 Python class individual project written by _**Xinghan Qin**_.
 
-Billper is a bill manage application which is designed for small and medium size groups in short, medium and long term. As tourist industry develops fast and people have higher life quality requirement, bill sharing and management become the daily work during the trip. Also, for students and some young people, rent an apartment or a house together means there would be a bill issue, too. Hence, the Billper can relief people from dealing with bills during the happy tour or daily life. 
+Billper is a bill manage application which is designed for small and medium size groups in short, medium and long term. 
+As tourist industry develops fast and people have higher life quality requirement, bill sharing and management become the daily work during the trip. 
+Also, for students and some young people, rent an apartment or a house together means there would be a bill issue, too. 
+Hence, the Billper can relief people from dealing with bills during the happy tour or daily life. 
+
+##
 
 ## 
 
@@ -49,11 +54,17 @@ Billper is a bill manage application which is designed for small and medium size
 
 * **Save money**
 
-  Member can save money into the group acount for further payment and reimburse.
+  Member can save money into the group account for further payment and reimburse.
 
   * Saving requirement
   
-    Members in the group can submit a save in requirement. The requirement will include who need to save and how much need to save. After everyone involved in the requirement accept, they need to save the required money into the group account. If more than half of payers refuse to save in, the requirement will be cancelled. If at least one but less than half payer refuse to save in, this requirement will be hold and the payers refused have another chance to vote. After the second vote, unless every payer accept, the requirement will be accepted, and it will move to saving part. Otherwise, the requirement will be cancelled.
+    Members in the group can submit a save in requirement. 
+    The requirement will include who need to save and how much need to save. 
+    After everyone involved in the requirement accept, they need to save the required money into the group account. 
+    If more than half of payers refuse to save in, the requirement will be cancelled. 
+    If at least one but less than half payer refuse to save in, this requirement will be hold and the payers refused have another chance to vote. 
+    After the second vote, unless every payer accept, the requirement will be accepted, and it will move to saving part. 
+    Otherwise, the requirement will be cancelled.
     
     Saving requirement can be cancelled by the publisher anytime before the requirement being accepted.
     
@@ -65,7 +76,8 @@ Billper is a bill manage application which is designed for small and medium size
   
     After requirement being accepted, payer included in requirement need to save the required money into the group account. 
     
-    (*further development: 1. if anyone want to cancel the payment during the saving part. 2. if anyone didn't save the money into acount after long time*)
+    (*further development: 1. if anyone want to cancel the payment during the saving part.* 
+    *2. if anyone did not save the money into account after long time*)
     
   * E-receipt will be created and stored in history
 
@@ -73,7 +85,8 @@ Billper is a bill manage application which is designed for small and medium size
 
   Member can pay through the app by using group account directly.
   
-  (*further development: 1. how to get the limits authority conveniently. 2. the port to third payment apps or companies*)
+  (*further development: 1. how to get the limits authority conveniently.* 
+  *2. the port to third payment apps or companies*)
   
     * Payment
     
@@ -87,7 +100,7 @@ Billper is a bill manage application which is designed for small and medium size
   
     * Reimbursement requirement
     
-      * Title: descripe of reimbursement
+      * Title: describe of reimbursement
 
       * Amount: Money required
 
@@ -99,7 +112,10 @@ Billper is a bill manage application which is designed for small and medium size
 
 * **Withdraw**
 
-  Members can withdraw from group account. The money will be separated equally and send back to all the members' account. Depends on the group type (service term), the group will have different limited withdraw chances. If the group wants extra withdraw chance, it will charge some service fee.
+  Members can withdraw from group account. 
+  The money will be separated equally and send back to all the members' account. 
+  Depends on the group type (service term), the group will have different limited withdraw chances. 
+  If the group wants extra withdraw chance, it will charge some service fee.
   
     * Withdraw requirement
     
@@ -119,7 +135,9 @@ Billper is a bill manage application which is designed for small and medium size
 
 * **Delete account**
 
-  Group will be deleted with a all-accepted delete requirement or at expired date. Sevice will not be available anymore, money in the group account will be automatically send back to members follow the **Withdraw** rule. Bill history will be sent to every member.
+  Group will be deleted with a all-accepted delete requirement or at expired date. 
+  Service will not be available anymore, money in the group account will be automatically send back to members follow the **Withdraw** rule. 
+  Bill history will be sent to every member.
   
   * Delete condition
   
@@ -135,13 +153,31 @@ Billper is a bill manage application which is designed for small and medium size
   
 ##
 
-## Design and Implementation
+## Design 
+
+##
+
+## Implementations and Methods
+
+* Third payment companies and applications interfaces
+
+
+    * Save money to group account
+
+    * Payment (need to submit payment requirement to third payment companies and applications and read trade amount.)
+    
+    * WithDraw from group account
+
+* Service charge
+
+* Money separation 
 
 (*further development*)
 
 ##
 
-## Profit and Benifite
+## Profits and Benefits
+
 
 * Service fee. When a group is created, depending on the service term, every group member will be charge.
 
@@ -162,11 +198,5 @@ Billper is a bill manage application which is designed for small and medium size
 ## Author
 
 * Xinghan Qin
-
-##
-
-## License
-
-(*Further development*)
 
 ##
