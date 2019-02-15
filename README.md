@@ -11,8 +11,6 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 
 ##
 
-## 
-
 ## Features
 
 * Create account
