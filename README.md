@@ -161,7 +161,6 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 
 * Third payment companies and applications interfaces
 
-
     * Save money to group account
 
     * Payment (need to submit payment requirement to third payment companies and applications and read trade amount.)
