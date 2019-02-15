@@ -143,9 +143,19 @@ Billper is a bill manage application which is designed for small and medium size
 
 ## Profit and Benifite
 
+* Service fee. When a group is created, depending on the service term, every group member will be charge.
+
+* Extra withdraw fee. Although this charge is mainly used to pay for the trasmit fee to third companies or apps (e.g. bank).
+
+* Advertisement. This app can insert some advertisement.
+
+(*Further development*)
+
 ##
 
 ## Time Table
+
+(*Further development*)
 
 ##
 
@@ -156,5 +166,7 @@ Billper is a bill manage application which is designed for small and medium size
 ##
 
 ## License
+
+(*Further development*)
 
 ##
