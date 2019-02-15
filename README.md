@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This program is 551 Python class individual project written by Xinghan Qin.
+This program is 551 Python class individual project written by _**Xinghan Qin**_.
 
 Billper is a bill manage application which is designed for small and medium size groups in short, medium and long term. 
 As tourist industry develops fast and people have higher life quality requirement, bill sharing and management become the daily work during the trip. 
@@ -10,6 +10,8 @@ Also, for students and some young people, rent an apartment or a house together 
 Hence, the Billper can relief people from dealing with bills during the happy tour or daily life. 
 
 ##
+
+## 
 
 ## Features
 
@@ -26,6 +28,8 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 * Bill history
 
 * Delete account
+
+##
 
 ## Functions
 
@@ -157,6 +161,7 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 
 * Third payment companies and applications interfaces
 
+
     * Save money to group account
 
     * Payment (need to submit payment requirement to third payment companies and applications and read trade amount.)
@@ -172,6 +177,7 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 ##
 
 ## Profits and Benefits
+
 
 * Service fee. When a group is created, depending on the service term, every group member will be charge.
 
@@ -194,4 +200,3 @@ Hence, the Billper can relief people from dealing with bills during the happy to
 * Xinghan Qin
 
 ##
-
