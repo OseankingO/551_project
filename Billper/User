@@ -5,6 +5,10 @@ class User:
     __slots__ = ("username", "password", "balance", "visible", "group")
 
     def __init__(self, username, password):
+        '''
+        if check_username(username):   # check if this username has already been used in server
+            print("This username has already been used")
+        '''
         self.username = username
         self.password = password
         self.balance = 0
@@ -31,25 +35,25 @@ class User:
     def get_username(self):
         return self.username
 
-    def money_in(self, money):
+    def balance_in(self, money):
         if not self.visible:
             self.visit_deny()
             return
         self.balance += money
 
-    def money_out(self, money):  # return type is float, amount of money out
+    def balance_out(self, money):  # return type is float, amount of money out
         balance = self.balance - money
         if not self.visible:
             self.visit_deny()
             return
         if balance < 0:
-            print("Not sufficient funds\n")
+            print("Not sufficient funds")
             return False
         else:
             self.balance = balance
             return True
 
-    def money_check(self):
+    def get_balance(self):
         if not self.visible:
             self.visit_deny()
             return
@@ -114,6 +118,13 @@ class User:
             print("You are not in that group!")
             return
 
+    def vote(self, request):
+        #use user input
+        vote = True
+        request.add_user_vote(self, vote)   #write this method
+
+    # def add_group_request(self):
+
     @staticmethod
     def visit_deny():
         print("Account cannot be visited!")
@@ -122,34 +133,10 @@ class User:
 
 
 def main():
-    user1 = User("Sean", "123")
-    user2 = User("Sam", "321")
-    user2.log_in("Sam", "321")
-    user2.create_group("sb", 5, 10)
-    group_name = user2.get_group_name_list()
-    print(group_name)
-    group_num = user2.get_group_num_list()
-    x = group_num[0]
-    print(x)
-    group1 = user2.get_group("000001")
-    print(group1)
-    y = group1.get_group_name()
-    print(y)
-    group = user2.group[x]
-    group.add_user(user2)
-    print(group.get_user_name_list())
-    user2.money_in(300)
-    print(user2.money_out(400))
-    print(user2.money_check())
-    user2.log_out()
-    user1.log_in("Sean", "123")
-    group1.add_user(user1)
-    print(group.get_user_name_list())
-    group.delete_user(user1)
-    print(user1.get_group_name_list())
-    print(group1.get_user_name_list())
-
-
+    user1 = User("sean", "12345")
+    user1.log_in("sean", "12345")
+    user1.create_group("qqq", 10, 30)
+    print(user1.get_group_num_list())
 
 
 if __name__ == "__main__":
