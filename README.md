@@ -7,6 +7,8 @@ This program is 551 Python class individual project written by _**Xinghan Qin**_
 Woo is standed for "world" and "woo", which means say hi to the world. It is a post application which is designed for people to post their daily life and also you can check other's post from the whole world.
 For nowaday social app, you can normally only see the posts from people you add friends or the people subscripted. however, on this webside, when people post, no matter who are they and where they from, you can see their post. Everyday can have suprise.
 
+* **Important:** This project's test will be present as a doc file "test.doc"
+
 ##
 
 ## To run
