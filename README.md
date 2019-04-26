@@ -1,196 +1,239 @@
-# 551_Python Billper
+# 551_Python 
 
 ## Introduction
 
 This program is 551 Python class individual project written by _**Xinghan Qin**_.
 
-Billper is standed for bill helper. It is a bill manage application which is designed for small and medium size groups in short, medium and long term. 
-As tourist industry develops fast and people have higher life quality requirement, bill sharing and management become the daily work during the trip. 
-Also, for students and some young people, rent an apartment or a house together means there would be a bill issue, too. 
-Hence, the Billper can relief people from dealing with bills during the happy tour or daily life. 
+Woo is standed for "world" and "woo", which means say hi to the world. It is a post application which is designed for people to post their daily life and also you can check other's post from the whole world.
+For nowaday social app, you can normally only see the posts from people you add friends or the people subscripted. however, on this webside, when people post, no matter who are they and where they from, you can see their post. Everyday can have suprise.
 
 ##
 
+## To run
+
+* On python3, install flask, flask-bcrypt, flask-login, flask mail, flask-sqlalchemy, flask-wtf, markupsafe, pillow, sqlalchemy, wtfform, bcypt, requests
+
+* Go to /Woo
+
+* On terminal: python3 run.py
+
+* Go to a browser and go to localhost/5000 to view the home page
+
 ## Features
 
-* Create account
+* Create account:
+You can regist an account with username, email and password. the username and email have to be unique
 
-* Save money
+* Update account:
+You can change the username, email, password and profile picture of your account
 
-* Payment
+* Delete account:
+You can delete your own account
 
-* Reimbursement submission
+* Post:
+You can create a post with title, contents and you can even add a picture
 
-* Withdraw
+* Update post:
+You can modify your post' title contents and picture, where sometimes you find there are some small mistake on your post, you don't have to delete the whole post and create a new one.
 
-* Bill history
+* Delete post:
+You can delete your own post which you don't want
 
-* Delete account
+* Check all posts:
+You can check all posts at the home page
+
+* Check user's posts:
+You can check a specific user's post by click his or her name
 
 ##
 
 ## Functions
 
-* **Create account**
-  
-  Users can create a group to manage the bill by choosing number of people and service term.
+* **Registor**
 
-  * Number of people
+  * Username
   
     * Minimum size 2
-    * maximum size 20
+    * Maximum size 20
 
-  * Service term
+  * Email
   
-    * 3 weeks
+    * An email format
     
-    * 3 months
-    
-    * 6 months
-    
-    * 2 years
-
-* **Save money**
-
-  Member can save money into the group account for further payment and reimburse.
-
-  * Saving requirement
+  * Password
   
-    Members in the group can submit a save in requirement. 
-    The requirement will include who need to save and how much need to save. 
-    After everyone involved in the requirement accept, they need to save the required money into the group account. 
-    If more than half of payers refuse to save in, the requirement will be cancelled. 
-    If at least one but less than half payer refuse to save in, this requirement will be hold and the payers refused have another chance to vote. 
-    After the second vote, unless every payer accept, the requirement will be accepted, and it will move to saving part. 
-    Otherwise, the requirement will be cancelled.
-    
-    Saving requirement can be cancelled by the publisher anytime before the requirement being accepted.
-    
-      * Choose payer (can select individuals or select all)
-      
-      * Enter the money required from payer
+    * will be hashed when account is created
   
-  * Saving into account
+  * Comfirm password
   
-    After requirement being accepted, payer included in requirement need to save the required money into the group account. 
-    
-    (*further development: 1. if anyone want to cancel the payment during the saving part.* 
-    *2. if anyone did not save the money into account after long time*)
-    
-  * E-receipt will be created and stored in history
-
-* **Payment**
-
-  Member can pay through the app by using group account directly.
+  * Database:
   
-  (*further development: 1. how to get the limits authority conveniently.* 
-  *2. the port to third payment apps or companies*)
+    * All information of this user will be saved in database
   
-    * Payment
-    
-    * E-receipt will be created and stored in history
+* **Login**
 
-* **Reimbursement submission**
-
-  Member can submit reimbursement requirement with title, amount of money and receipt. After everyone in group accept the requirement, moneny will be sent back to the publisher's account. If more than half of payers refuse, the requirement will be cancelled. If at least one but less than half payer refuse, this requirement will be hold.
+  * Username
   
-  (*further development: 1. better vote rule for at least one but less than half payer refuse situation*)
+    * Minimum size 2
+    * Maximum size 20
+    * Check username exist in database
+
+  * Password
   
-    * Reimbursement requirement
-    
-      * Title: describe of reimbursement
+    * According to the username check the password in database
 
-      * Amount: Money required
+* **Update account**
 
-      * Picture: receipt photo or copy
-    
-    * Money send back
-    
-    * E-receipt will be created and stored in history
-
-* **Withdraw**
-
-  Members can withdraw from group account. 
-  The money will be separated equally and send back to all the members' account. 
-  Depends on the group type (service term), the group will have different limited withdraw chances. 
-  If the group wants extra withdraw chance, it will charge some service fee.
+  * Username
   
-    * Withdraw requirement
+    * User's username will be displayed at the begining
+    * Minimum size 2
+    * Maximum size 20
+    * Check username exist in database
     
-    * Extra withdraw charge (option)
-    
-    * Pay back
-    
-    * E-receipt will be created and stored in history
-    
-* **Bill history**
-
-  Any group member can check and download bill history.
+  * Email
   
-  * Check
-  
-  * Download
+    * User's email will be displayed at the begining
+    * Check username exist in database
 
+  * Profile picture
+  
+    * Update a jpg or png file
+    
+  * Password
+  
+    * Verify the email to send an link to user's email to change password
+    
+  * Database:
+  
+    * All information of this user will be updated in database
+    
 * **Delete account**
 
-  Group will be deleted with a all-accepted delete requirement or at expired date. 
-  Service will not be available anymore, money in the group account will be automatically send back to members follow the **Withdraw** rule. 
-  Bill history will be sent to every member.
+  * Username
   
-  * Delete condition
-  
-    * Delete requirement 
+    * Minimum size 2
+    * Maximum size 20
+    * Check username exist in database
 
-    * Expired date
+  * Password
+  
+    * According to the username check the password in database
+    
+  * Database:
+    
+    * All information of this user will be deleted from database
+    * All the posts of user will be deleted
+    * Profile picture will be deleted from local static path
+    
+* **Create post**
 
-  * Money send back
+  * Title
+
+  * Content
   
-  * Send Bill history 
+  * Picture
   
-  * Account delete
+    * Update a jpg or png file
+    * Can be empty
+    
+  * Database:
   
+    * All information of this post will be saved in database
+    
+* **Update post**
+
+  * User
+  
+    * User has to be the author of this post 
+
+  * Title
+  
+    * Post's title will be displayed at the begining
+
+  * Content
+  
+    * Post's contents will be displayed at the begining
+  
+  * Picture
+  
+    * Post's picture path will be displayed at the begining
+    * Update a jpg or png file
+    * Can be empty
+    
+  * Database:
+  
+    * All information of this user will be updated in database
+    
+* **Delete post**
+    
+  * Database:
+  
+    * All information of this post will be deleted from database
+    * Post picture will be deleted from local static path
+    
+* **View post**
+
+  * Home
+  
+    * All posts from world can be seen
+    
+    * Each page will contain 5 post
+    
+    * Page bar is at the bottom of the home page
+    
+  * User
+  
+    * User's post can be showed by click the User's name on the Post
+    
+    * All posts from user can be seen
+    
+    * Each page will contain 5 post
+    
+    * Page bar is at the bottom of the home page
+
 ##
 
 ## Design 
+
+* Without login:
+  
+  * Memu Bar:
+  
+    * Home
+    * About
+    * Login
+    * Registor
+    
+  * Posts
+  
+* With login:
+  
+  * Memu Bar:
+  
+    * Home
+    * About
+    * New Post
+    * Account
+    * Logout
+    
+  * Posts
 
 ##
 
 ## Implementations and Methods
 
-* Third payment companies and applications interfaces
-
-    * Save money to group account
-
-    * Payment (need to submit payment requirement to third payment companies and applications and read trade amount.)
-    
-    * WithDraw from group account
-
-* Service charge
-
-* Money separation 
-
-(*further development*)
+The main methods implement is flask where can create database, and pass the information from UI to database. The website create is from the the Youtube Tutorial:https://www.youtube.com/watch?v=Wfx4YBzg16s
 
 ##
 
-## Profits and Benefits
+## Further Developement
 
+* Improve UI
 
-* Service fee. When a group is created, depending on the service term, every group member will be charge.
+* Add comment and like function
 
-* Extra withdraw fee. Although this charge is mainly used to pay for the trasmit fee to third companies or apps (e.g. bank).
-
-* Advertisement. This app can insert some advertisement.
-
-(*Further development*)
-
-##
-
-## Time Table
-
-(*Further development*)
-
-##
+* Add chat function
 
 ## Author
 
