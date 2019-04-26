@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>About Page</h1>
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/author.jpg') }}">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a>Author: Xinghan Qin</a>
+            </div>
+            <h2 class="article-title">From Author</h2>
+            <p class="article-content">Thank you to use this website. Please add posts as much as possible to
+            to colorful this website! (*' v '*)</p>
+        </div>
+    </article>
+{% endblock content %}
