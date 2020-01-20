@@ -19,7 +19,7 @@ For nowaday social app, you can normally only see the posts from people you add 
 
 * On terminal: python3 run.py
 
-* Go to a browser and go to localhost/5000 to view the home page
+* Go to a browser and go to localhost:5000 to view the home page
 
 ## Features
 
