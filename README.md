@@ -2,7 +2,7 @@
 
 ## Language
 
-pyhton, HTML
+Pyhton, HTML
 
 ## Introduction
 
