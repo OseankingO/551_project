@@ -1,5 +1,9 @@
 # 551_Python 
 
+## Language
+
+pyhton, HTML
+
 ## Introduction
 
 This program is 551 Python class individual project written by _**Xinghan Qin**_.
